@@ -1,0 +1,29 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Managed Google Play iframe</title>
+	<style></style>
+</head>
+<body>
+
+    <h1>Managed Google Play iframe</h1>
+
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <div id="container"></div>
+
+    <script>
+        gapi.load('gapi.iframes', function() {
+            var options = {
+            'url': 'https://play.google.com/work/embedded/search?token=web_token&mode=SELECT',
+            'where': document.getElementById('container'),
+            'attributes': { style: 'width: 600px; height:1000px', scrolling: 'yes'}
+            }
+
+            var iframe = gapi.iframes.getContext().openChild(options);
+        });
+    </script>
+
+</body>
+</html>
