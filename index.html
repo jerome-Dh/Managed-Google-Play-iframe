@@ -29,9 +29,12 @@
 
     <script>
         gapi.load('gapi.iframes', function() {
+
+            // This token will expire in a few hours
+            let token = "WAP_6YqqARpYPMRuFhtEpetKQ8dis4aZ_8Zh4RMKMTKgoko6vNw9lAe2okDMhS6PTkaTeGyVrKm3Qjs7CKiidDd5bDXUZkjQV-G1-d9h8g45ZtT7pDGZFd0SvOhiPReU4bpLnDTBp4VZy1mrq6df6VgFMVr04ZMoH1R1MbxcWgz3LJtjRQtGG3S-uajisGB1iiG859gZTK9D4";
     
             var options = {
-                'url': 'https://play.google.com/work/embedded/search?token=WAP_6Yqo02ryoBVJr1jSFd1JLzz_gpEZKtxdanSlo5WRHc_k4lEbrC0ffR8PloPZ0fpp1ZzFF_V4KQJry1TiB747RIx5owXtHOlAapdH6-FubrwBrxkXwxn2Lj2R9mxFNe-2Iq90tngTX-1xVxwB_mlYqQM1eY7KOug&mode=SELECT&locale=en_US',
+                'url': 'https://play.google.com/work/embedded/search?token=' + token + '&mode=SELECT&locale=en_US',
                 'where': document.getElementById('container'),
                 'attributes': { style: 'width: 1024px; height:1000px', scrolling: 'yes'}
             }
